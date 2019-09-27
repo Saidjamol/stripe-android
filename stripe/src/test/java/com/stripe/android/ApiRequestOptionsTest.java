@@ -12,8 +12,8 @@ public class ApiRequestOptionsTest {
     public void testCreate() {
         final ApiRequest.Options opts = ApiRequest.Options.create(
                 ApiKeyFixtures.FAKE_PUBLISHABLE_KEY, "account");
-        assertEquals(ApiKeyFixtures.FAKE_PUBLISHABLE_KEY, opts.apiKey);
-        assertEquals("account", opts.stripeAccount);
+        assertEquals(ApiKeyFixtures.FAKE_PUBLISHABLE_KEY, opts.getApiKey());
+        assertEquals("account", opts.getStripeAccount());
     }
 
     @Test
