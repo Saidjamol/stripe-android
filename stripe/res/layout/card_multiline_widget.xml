@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    tools:orientation="vertical"
+    tools:parentTag="android.widget.LinearLayout">
 
     <com.stripe.android.view.IconTextInputLayout
         android:id="@+id/tl_add_source_card_number_ml"
+        style="@style/Widget.Design.TextInputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/add_card_element_vertical_margin"
@@ -20,7 +24,8 @@
             android:imeOptions="actionNext"
             android:inputType="number"
             android:nextFocusDown="@+id/et_add_source_expiry_ml"
-            android:nextFocusForward="@+id/et_add_source_expiry_ml" />
+            android:nextFocusForward="@+id/et_add_source_expiry_ml"
+            android:textSize="14sp" />
 
     </com.stripe.android.view.IconTextInputLayout>
 
@@ -49,7 +54,8 @@
                 android:inputType="date"
                 android:maxLength="@integer/date_length"
                 android:nextFocusDown="@+id/et_add_source_cvc_ml"
-                android:nextFocusForward="@+id/et_add_source_cvc_ml" />
+                android:nextFocusForward="@+id/et_add_source_cvc_ml"
+                android:textSize="14sp" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -69,7 +75,8 @@
                 android:imeOptions="actionNext"
                 android:inputType="numberPassword"
                 android:nextFocusDown="@+id/et_add_source_postal_ml"
-                android:nextFocusForward="@+id/et_add_source_postal_ml" />
+                android:nextFocusForward="@+id/et_add_source_postal_ml"
+                android:textSize="14sp" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -90,7 +97,8 @@
                 android:hint="@string/acc_label_zip"
                 android:imeOptions="actionDone"
                 android:inputType="number"
-                android:maxLength="5" />
+                android:maxLength="5"
+                android:textSize="14sp" />
 
         </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
